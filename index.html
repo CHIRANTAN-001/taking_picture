@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Capture picture from your webcam</title>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card ">
+					<h5 class="card-header h2 text-center ">
+						<div class="fw-bold">
+							<img src="data:image/png;base64,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" alt="" height="50" width="50" ><span class="text-danger "> Live Cam</span>
+						</div>
+					</h5>
+					<div class="card-body text-center">
+						<div class="booth text-right">
+                            <!-- <div class="div" id="camera" width="200%" height="70%"> -->
+                                <div id="camera" style="height:auto;width:auto; text-align:left;">
+                                    <input type="button" value="Take a Snap and Download Picture" id="btPic" onclick="takeSnapShot()" /> 
+                                </div>
+                            <!-- </div> -->
+						</div>
+
+						<div class="text-right">
+							<input type="button" value="Take a Snap and Download Picture" id="btPic" onclick="takeSnapShot()" />
+                            <!-- <p id="snapShot"></p> -->
+						</div>
+					</div>
+				</div>
+               
+                 
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+    
+    
+    <!-- Bootstrap JavaScript Libraries -->
+
+
+    <script>
+       // CAMERA SETTINGS.
+    Webcam.set({
+        width: 800,
+        height: 600,
+        image_format: 'jpeg',
+        jpeg_quality: 100
+    });
+    Webcam.attach('#camera');
+
+    // TAKE A SNAPSHOT.
+    takeSnapShot = function () {
+        Webcam.snap(function (data_uri) {
+            downloadImage('Test', data_uri);
+        });
+    }
+
+    // DOWNLOAD THE IMAGE.
+    downloadImage = function (name, datauri) {
+        var a = document.createElement('a');
+        a.setAttribute('download', name + '.png');
+        a.setAttribute('href', datauri);
+        a.click();
+    }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
